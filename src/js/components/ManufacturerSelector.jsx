@@ -16,24 +16,27 @@ var ManufacturerSelector = React.createClass({
 
     render: function () {
         return (
+            <div className="manufacturer-selector">
+            <span className="selector-header">Manufacturer:</span>
             <form action="">
                 {
                     this.props.manufacturers.map(function(m) {
                         var classes;
                         if (m.toLowerCase() == this.state.selectedManufacture) {
-                            classes = "btn btn-primary";
+                            classes = "pointer selector manufacturer-selected";
                         } else {
-                            classes = "btn btn-default";
+                            classes = "pointer selector manufacturer-default";
                         }
 
-                        return <input type="button"
+                        return <div><input type="text"
                                       className={classes}
                                       name="manufacturer"
                                       value={m}
-                                      onClick={this.handleClick} />
+                                      onClick={this.handleClick} /></div>
                     }.bind(this))
                 }
             </form>
+            </div>
         );
     }
 

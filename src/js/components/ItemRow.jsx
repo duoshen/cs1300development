@@ -5,10 +5,12 @@ var ItemRow = React.createClass({
     render: function () {
 
         return (
-            <div>
-                <img src={this.props.prefix + this.props.item.img} height="100" width="100" />
-                Make : {this.props.item.manufacturer}, Model : {this.props.item.model}<br/>
-                Year : {this.props.item.year}, Price :{this.props.item.price}
+            <div className = "col-md-6">
+                <img className = "car-thumbnail" src={this.props.prefix + this.props.item.img}/> <br/>
+                <div>
+	                <p className = "item-row-manufacturer">{this.props.item.manufacturer}  {this.props.item.model}  {this.props.item.year} </p>
+	                <p className = "item-price">$ {this.props.item.price}</p>
+                </div>
             </div>
             );
     }

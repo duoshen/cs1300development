@@ -45,16 +45,19 @@ var PriceRangeSelector = React.createClass({
         }
 
         return (
+            <div className="price-range-selector">
+            <span className="selector-header">Price Range:</span>
             <form action="">
                 {
                     buttons.map(function (r) {
-                        return <input type="button"
-                                      className={this.state.selectedRange == r.text ? "btn btn-primary" : "btn btn-default"}
+                        return <div><input type="text"
+                                      className={this.state.selectedRange == r.text ? "pointer selector price-range-selected" : "pointer selector price-range-default"}
                                       value={r.text}
-                                      onClick={this.selectRange}/>
+                                      onClick={this.selectRange}/></div>
                     }.bind(this))
                 }
             </form>
+            </div>
         );
     }
 });

@@ -20,7 +20,7 @@ var FilterableTable = React.createClass({
             filterText: '',
             selectedManufacture: ALL.toLowerCase(),
             selectedColor: ALL.toLowerCase(),
-            sortingField: "Manufacturer",
+            sortingField: "Price",
             sortInOrder: true,
             minPrice: 0,
             maxPrice: Number.MAX_VALUE
@@ -54,11 +54,43 @@ var FilterableTable = React.createClass({
         });
     },
 
-    updateSorting: function (field, inOrder) {
-        this.setState({
-            sortingField: field,
-            sortInOrder: inOrder
-        });
+    updateSorting: function (order) {
+        console.log("case is ", order);
+        // this.setState({
+        //     sortingField: field,
+        //     sortInOrder: inOrder
+        // });
+        switch(order){
+            case "1": 
+                this.setState({
+                    sortingField: "Price",
+                    sortInOrder: true
+                });
+                break;
+            case "2": 
+                this.setState({
+                    sortingField: "Price",
+                    sortInOrder: false
+                });
+                break;
+            case "3": 
+                this.setState({
+                    sortingField: "Year",
+                    sortInOrder: true
+                });
+                break;
+            case "4": 
+                this.setState({
+                    sortingField: "Year",
+                    sortInOrder: false
+                });
+                break;
+            default:
+               this.setState({
+                    sortingField: "Price",
+                    sortInOrder: true
+                });
+        }
     },
 
     filterItems: function (items) {
@@ -139,14 +171,16 @@ var FilterableTable = React.createClass({
         var displayItems = this.sortItems(this.filterItems(this.props.items));
 
         return (
-            <div>
-                This is the filterable table
-                <ManufacturerSelector manufacturers={manufacturers} selected={this.props.selectedManufacture} selectionCallback={this.updateManufacturerSelection} />
-                <ColorSelector colors={colors} selected={this.props.selectedColor} selectionCallback={this.updateColorSelection} />
-                <PriceRangeSelector selectionCallback={this.updatePriceRangeSelection}/>
-                <SortingOptions sortingCallback={this.updateSorting}/>
-
-                <ItemTable items={displayItems} filePathPrefix={this.props.filePathPrefix} />
+            <div className = "filterable-table row" >
+                <div className = "col-md-2">
+                    <ManufacturerSelector manufacturers={manufacturers} selected={this.props.selectedManufacture} selectionCallback={this.updateManufacturerSelection} />
+                    <ColorSelector colors={colors} selected={this.props.selectedColor} selectionCallback={this.updateColorSelection} />
+                    <PriceRangeSelector selectionCallback={this.updatePriceRangeSelection}/>
+                </div>
+                <div className = "col-md-10">
+                    Sort by : <SortingOptions sortingCallback={this.updateSorting}/><br/>
+                    <ItemTable items={displayItems} filePathPrefix={this.props.filePathPrefix} />
+                </div>
             </div>
         );
     }

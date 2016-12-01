@@ -16,24 +16,27 @@ var ColorSelector = React.createClass({
 
     render: function () {
         return (
+            <div className="color-selector">
+            <span className="selector-header">Colors:</span>
             <form action="">
                 {
                     this.props.colors.map(function(m) {
                         var classes;
                         if (m.toLowerCase() == this.state.selectedColor) {
-                            classes = "btn btn-primary";
+                            classes = "pointer selector color-selected";
                         } else {
-                            classes = "btn btn-default";
+                            classes = "pointer selector color-default";
                         }
 
-                        return <input type="button"
+                        return <div><input type="text"
                                       className={classes}
                                       name="color"
                                       value={m}
-                                      onClick={this.handleClick} />
+                                      onClick={this.handleClick} /></div>
                     }, this)
                 }
             </form>
+            </div>
         );
     }
 

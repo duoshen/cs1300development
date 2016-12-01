@@ -123,3 +123,84 @@ footer {
       padding: 0 10px; }
     footer ul li:first-child i {
       padding-left: 0; }
+
+.filterable-table {
+  padding: 0 16px;
+}
+
+.item-row-manufacturer {
+  font-size: 30px;
+  text-align: center;
+}
+
+.index-post{
+  max-width: 100%;
+}
+
+.car-thumbnail{
+  width: 450px;
+  height: 300px;
+  max-width: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.selector {
+  width: 100%;
+  border: none;
+  padding: 2px 10px;
+  margin: 2px 0;
+}
+
+.selector-header {
+  font-weight: heavy;
+  font-size: 1.3em;
+}
+
+
+.manufacturer-selector {
+  border: solid 1.5px #e2e2e2;
+  width: 100%;
+}
+
+.manufacturer-default {
+  color: #333;
+  backgorund-color: white;
+}
+
+.manufacturer-selected {
+  color: white;
+  background-color: #337ab7;
+}
+
+.color-selector {
+  border: solid 1.5px #e2e2e2;
+  width: 100%;
+}
+
+.color-default {
+  color: #333;
+  backgorund-color: white;
+}
+
+.color-selected {
+  color: white;
+  background-color: #337ab7;
+}
+
+.price-range-selector {
+  border: solid 1.5px #e2e2e2;
+  width: 100%;
+}
+
+.price-range-default {
+  color: #333;
+  backgorund-color: white;
+}
+
+.price-range-selected {
+  color: white;
+  background-color: #337ab7;
+}
