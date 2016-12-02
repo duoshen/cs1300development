@@ -129,15 +129,12 @@ footer {
 }
 
 .item-row-manufacturer {
-  color: #403e3e;
   font-size: 30px;
-  font-family: Arial;
-  padding-left: 20px;
+  text-align: center;
 }
 
 .index-post{
   max-width: 100%;
-  width: 2180px;
 }
 
 .car-thumbnail{
@@ -206,18 +203,4 @@ footer {
 .price-range-selected {
   color: white;
   background-color: #337ab7;
-}
-
-.item-price{
-  color: #cc3d3d;
-  font-size: 25px;
-  font-family: Consolas;
-  padding-left: 20px;
-  margin-top: -10px;
-}
-
-.not-found{
-  float: center;
-  margin-top: 40px;
-  margin-left: 100px;
 }
