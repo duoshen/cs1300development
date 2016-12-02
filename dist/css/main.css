@@ -163,6 +163,7 @@ footer {
 .manufacturer-selector {
   border: solid 1.5px #e2e2e2;
   width: 100%;
+  padding-left: 5px;
 }
 
 .manufacturer-default {
@@ -178,6 +179,7 @@ footer {
 .color-selector {
   border: solid 1.5px #e2e2e2;
   width: 100%;
+  padding-left: 5px;
 }
 
 .color-default {
@@ -193,6 +195,7 @@ footer {
 .price-range-selector {
   border: solid 1.5px #e2e2e2;
   width: 100%;
+  padding-left: 5px;
 }
 
 .price-range-default {
