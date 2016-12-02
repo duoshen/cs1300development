@@ -130,7 +130,15 @@ footer {
 
 .item-row-manufacturer {
   font-size: 30px;
-  text-align: center;
+  padding-left: 50px;
+}
+
+.item-price{
+  font-size: 25px;
+  font-family: Consolas;
+  color: #d41717;
+  padding-left: 50px;
+  margin-top: -10px;
 }
 
 .index-post{
@@ -207,3 +215,5 @@ footer {
   color: white;
   background-color: #337ab7;
 }
+
+
