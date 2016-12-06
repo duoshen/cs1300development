@@ -1,6 +1,6 @@
 ##Intro to React by an example of live car filtering page
 
-Here I have built a live car filtering page using React.js. You can check the result page [here](https://duoshen.github.io/cs1300development/) and the source code [here](https://duoshen.github.io/cs1300presentation/) (please use Chrome to open these link). In the following paragraph, I will give you some brief understanding of React and how to get started with a simple web page just like live filtering.
+Here I have built a live car filtering page using React.js. You can check the result page [here](https://duoshen.github.io/cs1300development/) (please use Chrome to open these link). In the following paragraph, I will give you some brief understanding of React and how to get started with a simple web page just like live filtering.
 
 
 ###Why React?
